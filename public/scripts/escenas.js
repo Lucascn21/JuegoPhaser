@@ -1,0 +1,72 @@
+export class Escena1 extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'Escena1'
+        });
+
+    }
+
+    preload() { /*preload media for GameScene here*/ }
+
+
+    create() {
+        /*
+    var gs2 = this.add.text(500, 500, 'Escena1');
+    mainbtn = this.add.text(400, 50, 'main menu');
+    var txt2 = this.add.text(400, 320, 'next');
+
+    txt2.setInteractive().on('pointerdown', function() {
+
+        this.scene.scene.start('Escena2');
+    });
+    mainbtn.setInteractive().on('pointerdown', function() {
+        this.scene.scene.start('Escena1');
+
+    });*/
+    }
+
+    update(time, delta) {}
+}
+export class Escena2 extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'Escena2'
+        });
+
+    }
+    preload() { /*preload media for GameScene here*/ }
+
+
+    create() {}
+
+    update(time, delta) {}
+}
+export class Escena3 extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'Escena3'
+        });
+
+    }
+    preload() { /*preload media for GameScene here*/ }
+
+
+    create() {}
+
+    update(time, delta) {}
+}
+export class Escena4 extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'Escena4'
+        });
+
+    }
+
+    preload() { /*preload media for GameScene here*/ }
+
+
+    create() {}
+
+    update(time, delta) {}
+}

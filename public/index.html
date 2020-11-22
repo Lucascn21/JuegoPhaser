@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Real time multi-player games with HTML5</title>
+    <script src="dist/phaser.js"></script>
+    <!-- Notice the URL, this is handled by socket.io on the server automatically, via express -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+    <!-- This will create a connection to socket.io, and print the user serverid that we sent from the server side. -->
+    <script type="text/javascript">
+        //This is all that needs
+        var socket = io.connect('/');
+
+        //Now we can listen for that event
+        socket.on('onconnected', function(data) {
+
+            //Note that the data is the object we sent from the server, as is. So we can assume its id exists. 
+            console.log('Connected successfully to the socket.io server. My server side ID is ' + data.id);
+
+        });
+    </script>
+    <script type="module" src="scripts/juego.js"></script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
