@@ -12,10 +12,9 @@ var config = {
     },
 };
 
-var game = new Phaser.Game(config);
-
 function preload() { console.dir(escenas) }
 
 function create() { console.dir(escenas) }
 
 function update() { console.dir(escenas) }
+var game = new Phaser.Game(config);

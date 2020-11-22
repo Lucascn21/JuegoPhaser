@@ -1,7 +1,9 @@
 export class Escena1 extends Phaser.Scene {
+
     constructor() {
         super({
             key: 'Escena1'
+
         });
 
     }
@@ -10,19 +12,18 @@ export class Escena1 extends Phaser.Scene {
 
 
     create() {
-        /*
-    var gs2 = this.add.text(500, 500, 'Escena1');
-    mainbtn = this.add.text(400, 50, 'main menu');
-    var txt2 = this.add.text(400, 320, 'next');
+        var gs2 = this.add.text(0, 0, 'Escena1');
+        var mainbtn = this.add.text(0, 50, 'main menu');
+        var txt2 = this.add.text(0, 100, 'next');
 
-    txt2.setInteractive().on('pointerdown', function() {
+        txt2.setInteractive().on('pointerdown', function() {
 
-        this.scene.scene.start('Escena2');
-    });
-    mainbtn.setInteractive().on('pointerdown', function() {
-        this.scene.scene.start('Escena1');
+            this.scene.scene.start('Escena2');
+        });
+        mainbtn.setInteractive().on('pointerdown', function() {
+            this.scene.scene.start('Escena1');
 
-    });*/
+        });
     }
 
     update(time, delta) {}
@@ -37,7 +38,15 @@ export class Escena2 extends Phaser.Scene {
     preload() { /*preload media for GameScene here*/ }
 
 
-    create() {}
+    create() {
+        var gs2 = this.add.text(0, 0, 'Escena2');
+        var mainbtn = this.add.text(0, 50, 'main menu');
+        var txt2 = this.add.text(0, 100, 'next');
+        mainbtn.setInteractive().on('pointerdown', function() {
+            this.scene.scene.start('Escena1');
+
+        });
+    }
 
     update(time, delta) {}
 }
