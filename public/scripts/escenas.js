@@ -10,13 +10,13 @@ export class Escena1 extends Phaser.Scene {
     }
 
     preload() { /*preload media for GameScene here*/
-        this.jugador = new Jugador(this) //not sure
+        this.load.image('wolf', 'assets/images/wolf.png');
     }
 
 
     create() {
-
-        console.dir(this.jugador) //not sure
+        // this.jugador = new Jugador(this) //not sure
+        //console.dir(this.jugador) //not sure
         var gs2 = this.add.text(0, 0, 'Escena1');
         var mainbtn = this.add.text(0, 50, 'main menu');
         var txt2 = this.add.text(0, 100, 'next');
@@ -29,6 +29,8 @@ export class Escena1 extends Phaser.Scene {
             this.scene.scene.start('Escena1');
 
         });
+        this.add.existing(new Jugador(this, 264, 250));
+
     }
 
     update(time, delta) {}
