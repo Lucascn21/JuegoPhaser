@@ -29,7 +29,8 @@ export class Escena1 extends Phaser.Scene {
             this.scene.scene.start('Escena1');
 
         });
-        this.add.existing(new Jugador(this, 264, 250));
+        var player = this.add.existing(new Jugador(this, 264, 250));
+        //var player = this.physics.add.sprite(100, 450, 'wolf');
 
     }
 

@@ -10,7 +10,13 @@ var config = {
         //we place it in the middle of the page.
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 100 },
+            debug: true
+        }
+    },
 };
 var game = new Phaser.Game(config);
 console.dir(game)

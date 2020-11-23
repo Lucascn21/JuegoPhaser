@@ -1,13 +1,14 @@
-export class Entidad extends Phaser.GameObjects.Sprite {
+export class Entidad extends Phaser.Physics.Arcade.Sprite {
     constructor(scene, x, y, textureKey, type) {
         super(scene, x, y, textureKey);
 
         this.scene = scene;
         this.textureKey = textureKey;
-        //this.scene.add.existing(this); Para que funcionen, hay que cambiar unos parametros del engine, sino da error. Ver try1.
+        // this.scene.add.existing(this); //Probablemente no quiera fisicas pero para aprender las estoy usando
         //this.scene.physics.world.enableBody(this, 0);
         this.type = type;
         this.isDead = false;
+
     }
 
     explode() {
