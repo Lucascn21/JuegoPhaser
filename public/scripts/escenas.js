@@ -1,3 +1,5 @@
+import { Entidad } from "./Entidad.js";
+import { Jugador } from "./Jugador.js";
 export class Escena1 extends Phaser.Scene {
 
     constructor() {
@@ -8,10 +10,14 @@ export class Escena1 extends Phaser.Scene {
 
     }
 
-    preload() { /*preload media for GameScene here*/ }
+    preload() { /*preload media for GameScene here*/
+        this.jugador = new Jugador(this) //not sure
+    }
 
 
     create() {
+
+        console.dir(this.jugador) //not sure
         var gs2 = this.add.text(0, 0, 'Escena1');
         var mainbtn = this.add.text(0, 50, 'main menu');
         var txt2 = this.add.text(0, 100, 'next');

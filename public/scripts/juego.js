@@ -1,4 +1,4 @@
-import * as escenas from '/scripts/escenas.js';
+import * as escenas from '/scripts/Escenas.js';
 var config = {
     type: Phaser.AUTO,
     width: 1024,
