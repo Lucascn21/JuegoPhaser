@@ -10,7 +10,7 @@ export class Escena1 extends Phaser.Scene {
     }
 
     preload() { /*preload media for GameScene here*/
-        this.load.image('wolf', 'assets/images/wolf.png');
+        this.load.spritesheet('gato', 'assets/images/gatoSS01.png', { frameWidth: 64, frameHeight: 64 });
     }
 
 
@@ -29,8 +29,10 @@ export class Escena1 extends Phaser.Scene {
             this.scene.scene.start('Escena1');
 
         });
+
         var player = this.add.existing(new Jugador(this, 264, 250));
-        //var player = this.physics.add.sprite(100, 450, 'wolf');
+
+        var player2 = this.physics.add.sprite(100, 450, 'gato');
 
     }
 
