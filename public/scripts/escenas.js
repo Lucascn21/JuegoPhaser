@@ -1,5 +1,4 @@
-import { Entidad } from "./Entidad.js";
-import { Jugador } from "./Jugador.js";
+import { Jugador } from '/scripts/Jugador.js';
 export class Escena1 extends Phaser.Scene {
 
     constructor() {

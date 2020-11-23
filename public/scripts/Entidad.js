@@ -4,8 +4,8 @@ export class Entidad extends Phaser.GameObjects.Sprite {
 
         this.scene = scene;
         this.textureKey = textureKey;
-        /*  this.scene.add.existing(this);
-          this.scene.physics.world.enableBody(this, 0);*/
+        //this.scene.add.existing(this); Para que funcionen, hay que cambiar unos parametros del engine, sino da error. Ver try1.
+        //this.scene.physics.world.enableBody(this, 0);
         this.type = type;
         this.isDead = false;
     }

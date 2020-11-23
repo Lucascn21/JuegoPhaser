@@ -10,11 +10,8 @@ var config = {
         //we place it in the middle of the page.
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
+
 };
-
-function preload() { console.dir(escenas) }
-
-function create() { console.dir(escenas) }
-
-function update() { console.dir(escenas) }
 var game = new Phaser.Game(config);
+console.dir(game)
+console.dir(config)
