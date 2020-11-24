@@ -10,7 +10,8 @@ export class Escena1 extends Phaser.Scene {
     }
 
     preload() { /*preload media for GameScene here*/
-        this.load.spritesheet('gato', 'assets/images/gatoSS01.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.multiatlas('gato', '../../../spritesheeting/gatoCaminar.json', 'spritesheeting');
+        // this.load.spritesheet('gato', 'assets/images/gatoSS01.png', { frameWidth: 64, frameHeight: 64 });
     }
 
 
@@ -31,8 +32,9 @@ export class Escena1 extends Phaser.Scene {
         });
 
         var player = this.add.existing(new Jugador(this, 264, 250));
-
-        var player2 = this.physics.add.sprite(100, 450, 'gato');
+        console.dir(player)
+        var frameNames = this.textures.get('gato').getFrameNames();
+        console.dir(frameNames)
 
     }
 

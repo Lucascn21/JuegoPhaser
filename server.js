@@ -11,6 +11,7 @@ app.use('/style', express.static(__dirname + '/public/style'));
 app.use('/scripts', express.static(__dirname + '/public/scripts'));
 app.use('/assets', express.static(__dirname + '/public/assets'));
 app.use('/dist', express.static(__dirname + '/public/dist'));
+app.use('/spritesheeting', express.static(__dirname + '/../Spritesheeting/')); //Temporal
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/index.html');
