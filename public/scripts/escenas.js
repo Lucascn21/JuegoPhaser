@@ -10,14 +10,12 @@ export class Escena1 extends Phaser.Scene {
     }
 
     preload() { /*preload media for GameScene here*/
-        this.load.multiatlas('gato', '../../../spritesheeting/gatoCaminar.json', 'spritesheeting');
-        // this.load.spritesheet('gato', 'assets/images/gatoSS01.png', { frameWidth: 64, frameHeight: 64 });
+
+
     }
 
 
     create() {
-        // this.jugador = new Jugador(this) //not sure
-        //console.dir(this.jugador) //not sure
         var gs2 = this.add.text(0, 0, 'Escena1');
         var mainbtn = this.add.text(0, 50, 'main menu');
         var txt2 = this.add.text(0, 100, 'next');
@@ -31,14 +29,17 @@ export class Escena1 extends Phaser.Scene {
 
         });
 
-        var player = this.add.existing(new Jugador(this, 264, 250));
-        console.dir(player)
-        var frameNames = this.textures.get('gato').getFrameNames();
-        console.dir(frameNames)
+        this.jugador = new Jugador(this.matter.world, 264, 250, 'none', 'none')
+        console.dir(this.jugador)
 
     }
 
-    update(time, delta) {}
+    update(time, delta) {
+        const speed = 2.5;
+        let playerVelocity = new Phaser.Math.Vector2();
+        this.jugador.update()
+
+    }
 }
 export class Escena2 extends Phaser.Scene {
     constructor() {
@@ -60,7 +61,9 @@ export class Escena2 extends Phaser.Scene {
         });
     }
 
-    update(time, delta) {}
+    update(time, delta) {
+
+    }
 }
 export class Escena3 extends Phaser.Scene {
     constructor() {

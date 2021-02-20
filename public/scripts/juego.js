@@ -11,10 +11,17 @@ var config = {
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
     physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 100 },
-            debug: true
+        default: 'matter',
+        matter: {
+            debug: true,
+            gravity: { y: 0 }
+        },
+        plugins: {
+            scene: {
+                plugin: PhaserMatterCollisionPlugin,
+                key: 'matterCollision',
+                mapping: 'matterCollision'
+            }
         }
     },
 };
