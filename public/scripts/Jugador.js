@@ -10,7 +10,7 @@ export class Jugador extends Entidad {
         //Movimiento
         const speed = 2.5;
         let playerVelocity = new Phaser.Math.Vector2();
-        this.keys = this.scene.input.keyboard.addKeys('W,S,A,D', false, true);
+        this.   keys = this.scene.input.keyboard.addKeys('W,S,A,D', false, true);
         this.keys.W.on('down', function(event) {
             playerVelocity.y = -1;
             setVelocidad(playerVelocity);

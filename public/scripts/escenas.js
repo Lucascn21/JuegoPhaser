@@ -35,9 +35,7 @@ export class Escena1 extends Phaser.Scene {
     }
 
     update(time, delta) {
-        const speed = 2.5;
-        let playerVelocity = new Phaser.Math.Vector2();
-        this.jugador.update()
+
 
     }
 }
